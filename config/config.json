@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Temple2010",
+    "password": "PASSWORD",
     "database": "rehome_db",
     "host": "localhost",
     "dialect": "mysql"
