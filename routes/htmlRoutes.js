@@ -1,23 +1,27 @@
-var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
-  // Load index page
+
+  // Each of the below routes just handles the HTML page that the user gets sent to.
+
+  // index route loads view.html
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/homepage.html"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  // rehome route loads rehome.html
+  app.get("/rehome", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/rehome.html"));
+  });
+
+  // homepage route loads homepage.html
+  app.get("/homepage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/homepage.html"));
+  });
+
+  // adopt route loads adopt.html
+  app.get("/adopt", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/adopt.html"));
   });
 
   // Render 404 page for any unmatched routes
