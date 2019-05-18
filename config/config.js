@@ -1,9 +1,11 @@
-{
+require("dotenv").config();
+
+var config = {
   "development": {
-    "username": "chp6gg7arxbbhro6",
-    "password": "epzj3dgbkiz0flw5",
-    "database": "n89a75b1g6jvytqz",
-    "host": "h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": process.env.PASSWORD,
+    "database": process.env.DATABASE,
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
@@ -19,3 +21,5 @@
     "dialect": "mysql"
   }
 }
+
+module.exports = config;
