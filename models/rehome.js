@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
           allowNull: false,
       },
       petPicture: {
-          type: DataTypes.NVARCHAR,
+          type: DataTypes.STRING,
           allowNull: false,
       },
       gender: {
