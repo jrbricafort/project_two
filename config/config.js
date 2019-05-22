@@ -21,5 +21,6 @@ var config = {
     "dialect": "mysql"
   }
 }
+console.log(process.env.PASSWORD);
 
 module.exports = config;
