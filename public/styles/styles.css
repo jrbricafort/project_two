@@ -13,9 +13,10 @@ width: 30%;
   }
   .form-group > id {
     width: 50%;
-    
+ 
     }
 .rehome-card {
+  opacity: 0.8;
   color: white;   
   background: #323639;
   padding: 30px;
