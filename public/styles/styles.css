@@ -1,6 +1,30 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.form-group > input {
+width: 30%;
+
+}
+
+.form-group > select {
+  width: 30%;
+  
+  }
+  .form-group > id {
+    width: 50%;
+ 
+    }
+.rehome-card {
+  color: white;   
+  background:rgba(50, 54, 57, 0.8);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+  
+
+  
 .content-div-12 {
   text-align: center;
   color: #fff;
