@@ -16,9 +16,8 @@ width: 30%;
  
     }
 .rehome-card {
-  opacity: 0.8;
   color: white;   
-  background: #323639;
+  background:rgba(50, 54, 57, 0.8);
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
