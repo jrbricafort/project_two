@@ -30,56 +30,63 @@
         </nav>
     </div>
     <div class="container rehome-card">
-        <h1>Rehome</h1>
-        <p>Rehoming your dog should be safe and straightforward both for you and your pet.
-            Our experts at PAWZ with support from The ProjectTwo Foundation, have created a secure,
-            trusted program to help you place your dog from your loving home directly to another.</p>
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Full Name (Required)</label>
-                <input id="name" type="text" class="form-control" placeholder="">
-            </div>
+        <div class="card-rehome">
 
-            <div class="form-group">
-                <label for="question1">Pet Type</label>
-                <select class="form-control col-md-3" id="question1">
-                    <option value="empty">Dog</option>
-                    <option value="empty">Cat</option>
-                    <option value="empty">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Pet Name</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Pet Name">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Pet Picture URL(required)</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Pet Picture URL">
-            </div>
-            <div class="form-group">
-                <label for="question1">Gender</label>
-                <select class="form-control col-md-8" id="question1">
-                    <option value="empty">Select an Option</option>
-                    <option value="empty">Male</option>
-                    <option value="empty">Female</option>
+            <h1>Rehome Survey</h1>
+            <p>Rehoming your pet should be safe and straightforward both for you and your pet.
+                Our experts at PawZ have created a secure and trusted program to help you place your furry friend in
+                a
+                new
+                loving home.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" class="form-control col-md-3" placeholder="Full Name">
+                </div>
 
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Fun Facts</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1"
-                    placeholder="Fun Facts About Your Pet">
-            </div>
-        </form>
-    </div>
-    <div class="text-center">
-        <button type="button" class="btn btn-secondary btn-lg">PAWZ button</button>
+                <div class="form-group">
+                    <label for="question1">Pet Type</label>
+                    <select class="form-control col-md-3" id="question1">
+                        <option value="empty">Select an Option</option>
+                        <option value="empty">Dog</option>
+                        <option value="empty">Cat</option>
+                        <option value="empty">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="question2">Pet Name</label>
+                    <input type="text" class="form-control col-md-3" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="question3">Pet Picture URL(Required)</label>
+                    <input type="url" class="form-control col-md-3" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="question4">Gender</label>
+                    <select class="form-control col-md-3" id="question1">
+                        <option value="empty">Select an Option</option>
+                        <option value="empty">Male</option>
+                        <option value="empty">Female</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="question5">Fun Facts About Your Pet</label>
+                    <input type="text" class="form-control col-md-3" id="exampleFormControlInput1" placeholder="">
+                </div>
+            </form>
+        </div>
+        <div class="text-center">
+            <button id="submitBtn" type="submit" class="btn btn-success btn-lg col-md-3">Submit</button>
+        </div>
+
     </div>
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <p class="grey-text text-lighten-4">Thank you for visiting PAWZ. PAWZ make sure that your dog, cat,
+                    <p class="grey-text text-lighten-4">Thank you for visiting PAWZ. PAWZ make sure that your dog,
+                        cat,
                         and other pets
                         are rehome to loving homes.</p>
                 </div>

@@ -70,8 +70,10 @@ width: 30%;
 
 #submitBtn{
   background-color:white;
-  border-style: ridge;
-  border-color:white;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  color:black;
 
 }
 
