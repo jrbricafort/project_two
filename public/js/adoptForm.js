@@ -32,9 +32,9 @@ $(document).ready(function () {
 
         // Submits a new input and brings user to blog page upon completion
         function submitPost(adopt) {
-            $.post("/api/adopts", adopt, function () {
-                window.location.href = "/homepage";
-            }); 
+            $.post("/api/adopts", adopt, function(data) {
+                window.location.href = "/" + data;
+              }); 
         }
 
         // Clear the form when submitting

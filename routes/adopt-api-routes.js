@@ -12,9 +12,9 @@ module.exports = function(app) {
   
     // Create a new input
     app.post("/api/adopts", function(req, res) {
-      db.Adopt.create(req.body).then(function(dbPost) {
-        res.json(dbPost);
-      });
+        db.Adopt.findAll({}).then(function(dbAdopt) {
+            res.json(dbAdopt);
+          });
     });
   
     // Delete an example by id
