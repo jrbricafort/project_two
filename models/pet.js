@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Adopt = sequelize.define("Adopt", {
+    var Pet = sequelize.define("Pet", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -7,26 +7,26 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
         },
-        activityLevel: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        workhours: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        activityTime: {
+        petType: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        sociability: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        experience: {
+        petName: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        petPicture: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        gender: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        funFacts: {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
     });
-    return Adopt;
+    return Pet;
 };
