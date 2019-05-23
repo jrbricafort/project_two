@@ -14,19 +14,22 @@
 
 <body>
     <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="./homepage.html">
-            <img src="./img/paw.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-            PawZ
-        </a>
-        <div class="div">
-            <a class="btn btn-primary" href="#" role="button">How It Works</a>
-            <a class="btn btn-primary" href="./adopt.html" role="button">Adopt</a>
-            <a class="btn btn-primary" href="./rehome.html" role="button">Rehome</a>
-            <a class="btn btn-primary" href="#" role="button">Resources</a>
-            <a class="btn btn-primary" href="#" role="button">Contact</a>
-        </div>
-    </nav>
+    <div class="sticky-top">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="./homepage.html">
+                <img src="./img/paw.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+                PawZ
+            </a><i class="fas fa-home"></i>
+            <div class="div">
+                <a class="btn btn-link" href="#" role="button">How It Works</a>
+                <a class="btn btn-link" href="./adopt.html" role="button">Adopt</a>
+                <a class="btn btn-link" href="./rehome.html" role="button">Rehome</a>
+                <a class="btn btn-link" href="#" role="button">Resources</a>
+                <a class="btn btn-link" href="#" role="button">Contact</a>
+                <i class="fas fa-home"></i>
+            </div>
+        </nav>
+    </div>
     <div class="section">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -74,6 +77,15 @@
         </div>
     </div>
 
+    <br><br><br>
+
+
+    <div class="section2">
+        <div class="hello">
+            <h1 id="heading2">How It Works</h1>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -87,6 +99,10 @@
         $('.carousel').carousel({
             interval: 5000,
             pause: "false"
+        });
+
+        document.querySelector('.hello').scrollIntoView({
+            behavior: 'smooth'
         });
 
 
