@@ -21,20 +21,20 @@ $(document).ready(function () {
         // Constructing a new object to hand to the database
         var input = {
             name: $("#name").val().trim(),
-            activityLevel: $('#idHTML1').val().trim(),
-            workhours: $('#question2').val().trim(),
-            activityTime: $('#question3').val().trim(),
-            sociability: $('#question4').val().trim(),
-            sociability: $('#question5').val().trim(),
+            petType: $('#question1').val().trim(),
+            petName: $('#question2').val().trim(),
+            petPicture: $('#question3').val().trim(),
+            gender: $('#question4').val().trim(),
+            funFacts: $('#question5').val().trim(),
         };
 
         submitPost(input);
 
         // Submits a new input and brings user to blog page upon completion
-        function submitPost(rehomes) {
-            $.post("/api/rehomes", rehomes, function (data) {
+        function submitPost(adopt) {
+            $.post("/api/adopts", adopt, function(data) {
                 window.location.href = "/" + data;
-            });
+              }); 
         }
 
         // Clear the form when submitting
