@@ -16,26 +16,39 @@ $(document).ready(function () {
                 question5: $('#question5').val().trim(),
             };
             console.log(userInput);
+        
+
+            // Add user inputs to friends list
+            $.post("/api/pets", userInput, function (data) {
+                // Set the name and image values of friend match
+                $('#userMatch').html(data.petName);
+                $("#userMatchImage").attr("src", data.petPicture);
+                // Pop open the modal dialog
+                $('#modal1').modal("toggle");
+            });
+        } else {
+            // If a required field is missing, show alert
+            alert("Survey is incomplete!");
         }
 
-        // Constructing a new object to hand to the database
-        var input = {
-            name: $("#name").val().trim(),
-            activityLevel: $('#question1').val().trim(),
-            workhours: $('#question2').val().trim(),
-            activityTime: $('#question3').val().trim(),
-            sociability: $('#question4').val().trim(),
-            sociability: $('#question5').val().trim(),
-        };
+        // // Constructing a new object to hand to the database
+        // var input = {
+        //     name: $("#name").val().trim(),
+        //     activityLevel: $('#question1').val().trim(),
+        //     workhours: $('#question2').val().trim(),
+        //     activityTime: $('#question3').val().trim(),
+        //     sociability: $('#question4').val().trim(),
+        //     sociability: $('#question5').val().trim(),
+        // };
 
-        submitPost(input);
+        // submitPost(input);
 
-        // Submits a new input and brings user to blog page upon completion
-        function submitPost(adopt) {
-            $.post("/api/adopts", adopt, function(data) {
-                window.location.href = "/" + data;
-              }); 
-        }
+        // // Submits a new input and brings user to blog page upon completion
+        // function submitPost(adopt) {
+        //     $.post("/api/adopts", adopt, function(data) {
+        //         window.location.href = "/" + data;
+        //       }); 
+        // }
 
         // Clear the form when submitting
         $("#name").val("");
