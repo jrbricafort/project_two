@@ -33,7 +33,7 @@ $(document).ready(function () {
         // Submits a new input and brings user to blog page upon completion
         function submitPost(petData) {
             $.post("/api/rehomes", petData, function(data) {
-                window.location.href = "/" + data;
+                window.location.href = "/homepage";
               }); 
         }
 
