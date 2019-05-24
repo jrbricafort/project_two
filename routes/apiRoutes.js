@@ -1,24 +1,19 @@
+// Requiring our models
 var db = require("../models");
 
-module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+module.exports = function (app) {
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    // Get all the input
+    app.get("/api/rehomes", function (req, res) {
+        db.Pet.findAll({}).then(function (dbRehome) {
+            res.json(dbRehome);
+        });
     });
-  });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+    // Create a new input
+    app.post("/api/rehomes", function (req, res) {
+        db.Pet.create(req.body).then(function (dbRehome) {
+            res.json(dbRehome);
+        });
     });
-  });
-};
+}

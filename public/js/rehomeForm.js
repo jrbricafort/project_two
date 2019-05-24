@@ -31,8 +31,8 @@ $(document).ready(function () {
         submitPost(input);
 
         // Submits a new input and brings user to blog page upon completion
-        function submitPost(adopt) {
-            $.post("/api/adopts", adopt, function(data) {
+        function submitPost(petData) {
+            $.post("/api/rehomes", petData, function(data) {
                 window.location.href = "/" + data;
               }); 
         }
