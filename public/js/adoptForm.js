@@ -3,14 +3,11 @@ $(document).ready(function () {
     // Adding an event listener for when the form is submitted
     $("#submitBtn").on("click", function (event) {
         event.preventDefault();
-<<<<<<< HEAD
        
     });     
      var form = true;
-=======
         email = $("#email").val().trim();
         var form = true;
->>>>>>> f40f350b6a75d2b7d6295cb9093f361f91594fac
         if (form === true) {
             var userInput = {
                 name: $('#name').val().trim(),
@@ -55,7 +52,6 @@ $(document).ready(function () {
             alert("Survey is incomplete!");
         }
 
-<<<<<<< HEAD
         // Constructing a new object to hand to the database
         var input = {
             name: $("#name").val().trim(),
@@ -75,8 +71,6 @@ $(document).ready(function () {
               }); 
         }
 
-=======
->>>>>>> f40f350b6a75d2b7d6295cb9093f361f91594fac
         // Clear the form when submitting
         $("#name").val("");
         $("#email").val("");
@@ -87,8 +81,6 @@ $(document).ready(function () {
         $("#question5").val("");
 
     });
-<<<<<<< HEAD
-=======
 
     $(document).on("click", ".emailBtn", function (event) {
         location.reload();
@@ -108,4 +100,3 @@ $(document).ready(function () {
         alert("Message Sent!");
     })
 })
->>>>>>> f40f350b6a75d2b7d6295cb9093f361f91594fac
