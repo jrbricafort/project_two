@@ -82,10 +82,9 @@ module.exports = function (app) {
                 console.log(err);
             }
             else {
-                alert("Email sucessfully Sent")
-                // res.status(200).json({
-                //     message: 'Email successully Sent',
-                // });
+                res.status(200).json({
+                    message: 'Email successully Sent',
+                });
             }
         });
     });

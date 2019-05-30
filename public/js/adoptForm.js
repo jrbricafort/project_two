@@ -8,6 +8,7 @@ $(document).ready(function () {
         if (form === true) {
             var userInput = {
                 name: $('#name').val().trim(),
+                email: $('#email').val().trim(),
                 question1: $('#question1').val().trim(),
                 question2: $('#question2').val().trim(),
                 question3: $('#question3').val().trim(),
@@ -60,7 +61,8 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".emailBtn", function (event) {
-        event.preventDefault();
+        location.reload();
+        // event.preventDefault();
         var petInfo = {
             petId: $(this).attr("petId"),
             petGender: $(this).attr("petGender"),
@@ -73,5 +75,6 @@ $(document).ready(function () {
         $.post("/api/emailInfo", petInfo, function (data) {
             console.log(data);
         })
+        alert("Message Sent!");
     })
 })
