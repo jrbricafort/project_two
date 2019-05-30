@@ -4,8 +4,9 @@ $(document).ready(function () {
     // Adding an event listener for when the form is submitted
     $("#submitBtn").on("click", function (event) {
         event.preventDefault();
-
-        var form = true;
+       
+    });     
+     var form = true;
         if (form === true) {
             var userInput = {
                 name: $('#name').val().trim(),
@@ -31,24 +32,24 @@ $(document).ready(function () {
             alert("Survey is incomplete!");
         }
 
-        // // Constructing a new object to hand to the database
-        // var input = {
-        //     name: $("#name").val().trim(),
-        //     activityLevel: $('#question1').val().trim(),
-        //     workhours: $('#question2').val().trim(),
-        //     activityTime: $('#question3').val().trim(),
-        //     sociability: $('#question4').val().trim(),
-        //     sociability: $('#question5').val().trim(),
-        // };
+        // Constructing a new object to hand to the database
+        var input = {
+            name: $("#name").val().trim(),
+            activityLevel: $('#question1').val().trim(),
+            workhours: $('#question2').val().trim(),
+            activityTime: $('#question3').val().trim(),
+            sociability: $('#question4').val().trim(),
+            sociability: $('#question5').val().trim(),
+        };
 
-        // submitPost(input);
+        submitPost(input);
 
-        // // Submits a new input and brings user to blog page upon completion
-        // function submitPost(adopt) {
-        //     $.post("/api/adopts", adopt, function(data) {
-        //         window.location.href = "/" + data;
-        //       }); 
-        // }
+        // Submits a new input and brings user to blog page upon completion
+        function submitPost(adopt) {
+            $.post("/api/adopts", adopt, function(data) {
+                window.location.href = "/" + data;
+              }); 
+        }
 
         // Clear the form when submitting
         $("#name").val("");
@@ -59,4 +60,3 @@ $(document).ready(function () {
         $("#question5").val("");
 
     });
-})
