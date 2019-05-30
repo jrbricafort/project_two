@@ -26,6 +26,7 @@ $(document).ready(function () {
                         <img src = "${data[i].petPicture}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${data[i].petName}</h5>
+                            <h5 class="card-title">${data[i].gender}</h5>
                             <p class="card-text">The pet fun facts: ${data[i].funFacts}</p>
                             <a href="#" 
                                 petId= "${data[i].id}"
@@ -47,15 +48,14 @@ $(document).ready(function () {
             alert("Survey is incomplete!");
         }
 
-
-
         // Clear the form when submitting
-        // $("#name").val("");
-        // $("#question1").val("");
-        // $("#question2").val("");
-        // $("#question3").val("");
-        // $("#question4").val("");
-        // $("#question5").val("");
+        $("#name").val("");
+        $("#email").val("");
+        $("#question1").val("");
+        $("#question2").val("");
+        $("#question3").val("");
+        $("#question4").val("");
+        $("#question5").val("");
 
     });
 

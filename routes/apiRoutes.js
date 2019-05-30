@@ -67,24 +67,25 @@ module.exports = function (app) {
             port: 465,
             secure: true,
             auth: {
-                user: "projectemail@gmail.com",
-                pass: 'ExamplePassword1!'
+                user: "pawzrescuephilly@gmail.com",
+                pass: 'Pawzrescue1!'
             }
         });
         var mailOptions = {
             from: "Pawz",
             to: petInfo.email,
             subject: "Adoption Info",
-            text: 'Name: ' + petInfo.petName + '\n\n' + 'Image: ' + petInfo.petUrl + '\n\n' + 'FunFacts: ' + petInfo.petFacts
+            text: 'Name: ' + petInfo.petName + '\n\n' + 'Image: ' + petInfo.petUrl + '\n\n' + 'Gender: ' + petInfo.petGender + '\n\n' + 'FunFacts: ' + petInfo.petFacts
         };
         transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
                 console.log(err);
             }
             else {
-                res.status(200).json({
-                    message: 'Email successully Sent',
-                });
+                alert("Email sucessfully Sent")
+                // res.status(200).json({
+                //     message: 'Email successully Sent',
+                // });
             }
         });
     });
