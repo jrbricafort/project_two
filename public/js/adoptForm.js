@@ -50,6 +50,7 @@ $(document).ready(function () {
 
         // Clear the form when submitting
         $("#name").val("");
+        $("#email").val("");
         $("#question1").val("");
         $("#question2").val("");
         $("#question3").val("");
