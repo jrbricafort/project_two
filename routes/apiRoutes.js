@@ -67,8 +67,8 @@ module.exports = function (app) {
             port: 465,
             secure: true,
             auth: {
-                user: "projectemail@gmail.com",
-                pass: 'ExamplePassword1!'
+                user: "pawzrescuephilly@gmail.com",
+                pass: 'Pawsrescue1!'
             }
         });
         var mailOptions = {
