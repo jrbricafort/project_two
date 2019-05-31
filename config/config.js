@@ -18,9 +18,9 @@ module.exports = {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
-}
+};
 
-// This is for local branch testing only. 
+// This is for local branch testing only.
 // module.exports = {
 //   "development": {
 //     "username": "root",
