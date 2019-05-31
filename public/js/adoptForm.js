@@ -1,4 +1,23 @@
 $(document).ready(function () {
+    $('#modal1').on('hide.bs.modal', function (e) {
+        $('#modal1').html(`<div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Your Matches!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>`)
+    })
     var email = "";
     // Adding an event listener for when the form is submitted
     $("#submitBtn").on("click", function (event) {
@@ -52,11 +71,11 @@ $(document).ready(function () {
         // Clear the form when submitting
         $("#name").val("");
         $("#email").val("");
-        $("#question1").val("");
-        $("#question2").val("");
-        $("#question3").val("");
-        $("#question4").val("");
-        $("#question5").val("");
+        $("#question1").val("Select an Option");
+        $("#question2").val("Select an Option");
+        $("#question3").val("Select an Option");
+        $("#question4").val("Select an Option");
+        $("#question5").val("Select an Option");
 
     });
 
