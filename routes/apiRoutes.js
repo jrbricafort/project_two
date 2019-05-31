@@ -32,10 +32,11 @@ module.exports = function (app) {
         var userSelection = JSON.parse(JSON.stringify(req.body, null, 2));
         var sum = 0;
         var arr = [];
+        console.log(JSON.stringify(req.body, null, 2));
         for (const key in userSelection) {
             arr.push(userSelection[key])
         }
-        for (var i = 1; i < arr.length; i++) {
+        for (var i = 2; i < arr.length; i++) {
             // sum = sum + Number(arr[i]);
             sum += Number(arr[i]);
         }
@@ -68,14 +69,14 @@ module.exports = function (app) {
             secure: true,
             auth: {
                 user: "pawzrescuephilly@gmail.com",
-                pass: 'Pawsrescue1!'
+                pass: 'Pawzrescue1!'
             }
         });
         var mailOptions = {
             from: "Pawz",
             to: petInfo.email,
             subject: "Adoption Info",
-            text: 'Name: ' + petInfo.petName + '\n\n' + 'Image: ' + petInfo.petUrl + '\n\n' + 'FunFacts: ' + petInfo.petFacts
+            text: 'Name: ' + petInfo.petName + '\n\n' + 'Image: ' + petInfo.petUrl + '\n\n' + 'Gender: ' + petInfo.petGender + '\n\n' + 'FunFacts: ' + petInfo.petFacts
         };
         transporter.sendMail(mailOptions, function (err, info) {
             if (err) {

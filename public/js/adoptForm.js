@@ -1,4 +1,23 @@
 $(document).ready(function () {
+    $('#modal1').on('hide.bs.modal', function (e) {
+        $('#modal1').html(`<div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Your Matches!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>`)
+    })
     var email = "";
     // Adding an event listener for when the form is submitted
     $("#submitBtn").on("click", function (event) {
@@ -8,6 +27,7 @@ $(document).ready(function () {
         if (form === true) {
             var userInput = {
                 name: $('#name').val().trim(),
+                email: $('#email').val().trim(),
                 question1: $('#question1').val().trim(),
                 question2: $('#question2').val().trim(),
                 question3: $('#question3').val().trim(),
@@ -26,6 +46,7 @@ $(document).ready(function () {
                         <img src = "${data[i].petPicture}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${data[i].petName}</h5>
+                            <h5 class="card-title">${data[i].gender}</h5>
                             <p class="card-text">The pet fun facts: ${data[i].funFacts}</p>
                             <a href="#" 
                                 petId= "${data[i].id}"
@@ -47,20 +68,20 @@ $(document).ready(function () {
             alert("Survey is incomplete!");
         }
 
-
-
         // Clear the form when submitting
-        // $("#name").val("");
-        // $("#question1").val("");
-        // $("#question2").val("");
-        // $("#question3").val("");
-        // $("#question4").val("");
-        // $("#question5").val("");
+        $("#name").val("");
+        $("#email").val("");
+        $("#question1").val("Select an Option");
+        $("#question2").val("Select an Option");
+        $("#question3").val("Select an Option");
+        $("#question4").val("Select an Option");
+        $("#question5").val("Select an Option");
 
     });
 
     $(document).on("click", ".emailBtn", function (event) {
-        event.preventDefault();
+        location.reload();
+        // event.preventDefault();
         var petInfo = {
             petId: $(this).attr("petId"),
             petGender: $(this).attr("petGender"),
@@ -73,5 +94,6 @@ $(document).ready(function () {
         $.post("/api/emailInfo", petInfo, function (data) {
             console.log(data);
         })
+        alert("Message Sent!");
     })
 })
