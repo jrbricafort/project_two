@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/5414d09906.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,58 +14,77 @@
 </head>
 
 
-<body>
+<body class="adoptbody">
     <div class="sticky-top">
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light" style="background-color: white;">
             <a class="navbar-brand" href="./homepage.html">
                 <img src="./img/paw.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
                 PawZ
-            </a>
-            <div class="div">
-                <a class="btn btn-link" href="./howitworks.html" role="button">How It Works</a>
-                <a class="btn btn-link" href="./adopt.html" role="button">Adopt</a>
-                <a class="btn btn-link" href="./rehome.html" role="button">Rehome</a>
-                <a class="btn btn-link" href="./contact.html" role="button">Contact</a>
-            </div>
 
+                <div class="div">
+                    <a class="btn btn-link" href="./howitworks.html" role="button">How It Works</a>
+                    <a class="btn btn-link" href="./adopt.html" role="button">Adopt</a>
+                    <a class="btn btn-link" href="./rehome.html" role="button">Rehome</a>
+                    <a class="btn btn-link" href="./contact.html" role="button">Support</a>
+
+                </div>
         </nav>
     </div>
 
-    <div class="container container-contact">
-        <form>
+    <div class="card bg-dark text-white">
+        <img src="./img/pic12.jpeg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title-support">Need Help?</h5>
+            <p class="card-text-support">Contact Us:</p>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h1>Pawz Contact</h1>
-                    <h1>Phone Number: (610)222-2222</h1>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 right">
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com"
-                            name="email">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control form-control-lg">
+                <div class="addresscard" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Address:</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">PawZ Rescue Philly</h6>
+                        <p class="card-text">3401 Grays Ferry Ave, Philadelphia, PA 19146</p>
 
-            </textarea>
                     </div>
-                    <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
                 </div>
-            </div>
-        </form>
-    </div>
-    </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6">
+                <div class="phonecard" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Phone:</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Adoption Liason Department</h6>
+                        <p class="card-text">215-123-4567</p>
 
-                    <p>2019 Pawz.com</p>
+                    </div>
+                </div>
+                <div class="emailcard" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Email:</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">General Email</h6>
+                        <p class="card-text"><a href="#" class="card-link">pawzrescuephilly@gmail.com</a></p>
+
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+
+
+
+    <footer class="footer-adopt">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+
+                    <div class="socials">
+
+                        <ul>
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-pinterest-square"></i>
+                        </ul>
+                    </div>
+
+                </div>
+
     </footer>
 
     <!-- Custom Script -->
